@@ -71,10 +71,13 @@ To address this issue:
 
 ---
 
-### 2. Correlation Analysis
+## Correlation Analysis
 
-A correlation matrix was constructed to identify relationships between explanatory variables and potential multicollinearity.
+The correlation matrix below summarizes pairwise relationships between all variables used in the study.
 
+<p align="center">
+  <img src="images/correlation_matrix.jpeg" width="800">
+</p>
 ---
 
 ### 3. Granger Causality Analysis
