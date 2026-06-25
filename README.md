@@ -78,6 +78,7 @@ The correlation matrix below summarizes pairwise relationships between all varia
 <p align="center">
   <img src="images/correlation_matrix.jpg" width="800">
 </p>
+
 ---
 
 ### 3. Granger Causality Analysis
