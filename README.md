@@ -206,6 +206,10 @@ Although absolute values appear overstated, the relative ordering of scenarios r
 * Baseline scenario → moderate growth.
 * Crisis scenario → weakest growth.
 
+<p align="center">
+  <img src="images/forecast.jpg" width="800">
+</p>
+
 ---
 
 ## Project Structure
