@@ -71,7 +71,7 @@ To address this issue:
 
 ---
 
-## Correlation Analysis
+### 2. Correlation Analysis
 
 The correlation matrix below summarizes pairwise relationships between all variables used in the study.
 
@@ -82,15 +82,17 @@ The correlation matrix below summarizes pairwise relationships between all varia
 
 ### 3. Granger Causality Analysis
 
-Granger causality tests with lags of up to two years were applied to identify delayed effects.
+Granger causality tests were conducted using lags of up to two years.
 
-Statistically significant lagged relationships were detected for:
+The following statistically significant relationships were identified:
 
-* X4 (Exports/GDP)
-* X5 (Inflation)
-* X8 (Unemployment)
+| Variable | Lag | F-test p-value | Chi-square p-value |
+|-----------|-----------|-----------|-----------|
+| X4 (Exports/GDP) | 2 years | 0.0755 | 0.0082 |
+| X5 (Inflation) | 1 year | 0.0289 | 0.0073 |
+| X8 (Unemployment) | 2 years | 0.1216 | 0.0239 |
 
-These variables were later incorporated into lagged forecasting models.
+These variables were later incorporated as lagged predictors in the forecasting models.
 
 ---
 
