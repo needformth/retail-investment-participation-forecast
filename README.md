@@ -166,9 +166,10 @@ This suggests that all predictors contribute useful information and should not b
 
 A lagged version of the target variable was introduced:
 
-[
+$$
 Y_t = f(X_t, Y_{t-1})
-]
+$$
+
 
 Forecasts were generated recursively for multi-step prediction.
 
