@@ -29,9 +29,10 @@ The project combines econometric techniques and machine learning methods, includ
 
 **Y — Labor Force Participation in Investment Activity**
 
-[
+$$
 Y = \frac{\text{Number of Retail Investors}}{\text{Employed Population}}
-]
+$$
+
 
 ### Explanatory Variables
 
