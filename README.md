@@ -8,7 +8,7 @@ The target variable is defined as:
 
 > Number of retail investors registered on the Moscow Exchange divided by the employed population.
 
-The objective is to identify economically meaningful predictors, build a forecasting model, and generate medium-term scenario forecasts.
+The objective is to identify economically meaningful predictors, build a forecasting model, and generate medium-term scenario forecasts based on data of the Central bank of Russia.
 
 The project combines econometric techniques and machine learning methods, including stationarity testing, Granger causality analysis, regularized regression models, and expanding-window validation.
 
@@ -198,7 +198,7 @@ This outcome likely reflects:
 
 1. Structural changes in investor behavior after 2017.
 2. Extraordinary growth of retail investing during 2020–2021.
-3. Optimistic assumptions embedded in macroeconomic forecast scenarios.
+3. Optimistic assumptions of the CBR embedded in macroeconomic forecast scenarios.
 
 Although absolute values appear overstated, the relative ordering of scenarios remains economically consistent:
 
@@ -219,7 +219,7 @@ pythoning/
 │
 ├── analyzing.ipynb          # Main research notebook
 ├── for_python.xlsx          # Training dataset
-├── for_prediction.xlsx      # Scenario assumptions
+├── for_prediction.xlsx      # Scenario assumptions (source: the CBR)
 └── result.xlsx              # Forecasting results
 ```
 
