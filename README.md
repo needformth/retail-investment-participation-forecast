@@ -1,25 +1,71 @@
-# Labor Force Participation in Investment Activity Forecasting
+# Forecasting Retail Investment Activity Using Macroeconomic Indicators
 
 ## Overview
 
-This project investigates the relationship between macroeconomic indicators and labor force participation in investment activity in Russia.
+This project investigates the macroeconomic drivers of retail investment participation in Russia.
 
 The target variable is defined as:
 
 > Number of retail investors registered on the Moscow Exchange divided by the employed population.
 
-The objective is to identify economically meaningful predictors, build a forecasting model, and generate medium-term scenario forecasts based on data of the Central bank of Russia.
+The objective is to identify economically meaningful drivers of retail investment participation, evaluate forecasting approaches, and generate medium-term scenario forecasts using macroeconomic assumptions published by the Central Bank of Russia.
 
 The project combines econometric techniques and machine learning methods, including stationarity testing, Granger causality analysis, regularized regression models, and expanding-window validation.
 
 ---
 
-## Research Questions
+## Project Highlights
 
-* Which macroeconomic variables affect investment participation?
-* Do these effects appear immediately or with time lags?
-* Can regularized regression models improve forecasting accuracy?
-* How reliable are medium-term forecasts under different macroeconomic scenarios?
+- Forecasted retail investor participation using 8 macroeconomic indicators.
+- Applied ADF tests to ensure stationarity.
+- Identified lagged effects using Granger causality.
+- Developed a custom expanding-window validation framework.
+- Compared Ridge and ElasticNet models.
+- Achieved best performance with Recursive Ridge Regression:
+  - RMSE = 0.1043
+  - MAPE = 21.04%
+
+---
+
+## Repository Contents
+
+- Data preparation and stationarity testing
+- Correlation and causality analysis
+- Custom expanding-window validation
+- Ridge and ElasticNet benchmarking
+- Recursive multi-step forecasting
+- Scenario analysis using CBR assumptions
+
+---
+
+## Skills Demonstrated
+
+### Analytics & Econometrics
+- Time Series Analysis
+- Econometric Modeling
+- Granger Causality Analysis
+- Scenario Forecasting
+- Statistical Hypothesis Testing
+
+### Machine Learning
+- Ridge Regression
+- ElasticNet Regression
+- Hyperparameter Optimization
+- Expanding Window Cross-Validation
+
+### Data Processing
+- Data Cleaning
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+
+### Tools & Technologies
+- Python
+- Pandas
+- NumPy
+- Statsmodels
+- Scikit-learn
+- Matplotlib
+- Seaborn
 
 ---
 
@@ -27,7 +73,7 @@ The project combines econometric techniques and machine learning methods, includ
 
 ### Target Variable
 
-**Y — Labor Force Participation in Investment Activity**
+**Y — Retail Investment Participation Rate**
 
 $$
 Y = \frac{\text{Number of Retail Investors}}{\text{Employed Population}}
@@ -89,9 +135,9 @@ The following statistically significant relationships were identified:
 
 | Variable | Lag | F-test p-value | Chi-square p-value |
 |-----------|-----------|-----------|-----------|
-| X4 (Exports/GDP) | 2 years | 0.0755 | 0.0082 |
-| X5 (Inflation) | 1 year | 0.0289 | 0.0073 |
-| X8 (Unemployment) | 2 years | 0.1216 | 0.0239 |
+| Export Share of GDP | 2 years | 0.0755 | 0.0082 |
+| Inflation Rate | 1 year | 0.0289 | 0.0073 |
+| Unemployment Rate | 2 years | 0.1216 | 0.0239 |
 
 These variables were later incorporated as lagged predictors in the forecasting models.
 
@@ -188,23 +234,36 @@ This model achieved the best forecasting performance among all tested approaches
 
 ---
 
+## Model Comparison
+
+| Model | RMSE | MAPE |
+|---------|---------|---------|
+| Ridge (All Variables) | 0.2509 | 41.68% |
+| Ridge (Granger Variables Only) | 0.1447 | 31.59% |
+| Ridge (All Variables + Lags) | 0.1304 | 25.40% |
+| ElasticNet | 0.1498 | 40.01% |
+| Recursive Ridge | **0.1043** | **21.04%** |
+
+---
+
 ## Results
 
-The final model successfully captured the dynamics of investment participation and significantly outperformed alternative specifications.
+The best-performing model achieved:
 
-However, scenario forecasts produced unrealistically high values exceeding 100% participation by 2028.
+- RMSE = 0.1043
+- MAPE = 21.04%
 
-This outcome likely reflects:
+However, long-term scenario projections produced participation rates exceeding realistic upper bounds. This likely reflects:
 
 1. Structural changes in investor behavior after 2017.
-2. Extraordinary growth of retail investing during 2020–2021.
-3. Optimistic assumptions of the CBR embedded in macroeconomic forecast scenarios.
+2. Extraordinary growth in retail investing during 2020–2021.
+3. Optimistic macroeconomic assumptions embedded in CBR scenarios.
 
-Although absolute values appear overstated, the relative ordering of scenarios remains economically consistent:
+While absolute forecast levels should be interpreted cautiously, the relative ordering of scenarios remains economically meaningful:
 
-* Disinflationary scenario → strongest growth.
-* Pro-Inflationary scenario → moderate growth.
-* Crisis scenario → weakest growth.
+- Disinflationary scenario → strongest growth
+- Pro-inflationary scenario → moderate growth
+- Crisis scenario → weakest growth
 
 <p align="center">
   <img src="images/forecast.jpg" width="800">
@@ -222,20 +281,6 @@ pythoning/
 ├── for_prediction.xlsx      # Scenario assumptions (source: the CBR)
 └── result.xlsx              # Forecasting results
 ```
-
----
-
-## Technologies
-
-* Python
-* Pandas
-* NumPy
-* Statsmodels
-* Scikit-learn
-* Matplotlib
-* Seaborn
-
----
 
 ## Key Takeaways
 
