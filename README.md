@@ -76,7 +76,7 @@ To address this issue:
 The correlation matrix below summarizes pairwise relationships between all variables used in the study.
 
 <p align="center">
-  <img src="images/correlation_matrix.jpeg" width="800">
+  <img src="images/correlation_matrix.jpg" width="800">
 </p>
 ---
 
