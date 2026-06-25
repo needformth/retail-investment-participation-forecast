@@ -203,7 +203,7 @@ This outcome likely reflects:
 Although absolute values appear overstated, the relative ordering of scenarios remains economically consistent:
 
 * Disinflationary scenario → strongest growth.
-* Baseline scenario → moderate growth.
+* Pro-Inflationary scenario → moderate growth.
 * Crisis scenario → weakest growth.
 
 <p align="center">
